@@ -1,149 +1,95 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Programa Agrinho - Educação que transforma o campo e a cidade">
-    <title>Programa Agrinho - Educação Transformadora</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agrinho</title>
+
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header com navegação fixa -->
-    <header id="header" class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <div class="logo-icon">🌱</div>
-                    <span class="logo-text">Programa Agrinho</span>
-                </div>
 
-                <nav class="nav-desktop">
-                    <button onclick="scrollToSection('inicio')" class="nav-link">Início</button>
-                    <button onclick="scrollToSection('sobre')" class="nav-link">Sobre</button>
-                    <button onclick="scrollToSection('campo')" class="nav-link">Campo</button>
-                    <button onclick="scrollToSection('cidade')" class="nav-link">Cidade</button>
-                    <button onclick="scrollToSection('educacao')" class="nav-link">Educação</button>
-                    <button onclick="scrollToSection('recursos')" class="nav-link">Recursos</button>
-                    <button onclick="toggleDarkMode()" class="theme-toggle" id="themeToggle">
-                        <span id="themeIcon">🌙</span>
-                    </button>
-                </nav>
+<header class="header">
+  <div class="container nav-container">
+    <h1 class="logo">🌱 Agrinho</h1>
 
-                <div class="nav-mobile-buttons">
-                    <button onclick="toggleDarkMode()" class="theme-toggle-mobile">
-                        <span id="themeIconMobile">🌙</span>
-                    </button>
-                    <button onclick="toggleMenu()" class="menu-toggle">
-                        <span id="menuIcon">☰</span>
-                    </button>
-                </div>
-            </div>
-        </div>
+```
+<nav id="nav" class="nav">
+  <a href="#inicio">Início</a>
+  <a href="#sobre">Sobre</a>
+  <a href="#recursos">Recursos</a>
+</nav>
 
-        <nav id="mobileMenu" class="nav-mobile hidden">
-            <div class="mobile-menu-content">
-                <button onclick="scrollToSection('inicio')" class="mobile-nav-link">Início</button>
-                <button onclick="scrollToSection('sobre')" class="mobile-nav-link">Sobre</button>
-                <button onclick="scrollToSection('campo')" class="mobile-nav-link">Campo</button>
-                <button onclick="scrollToSection('cidade')" class="mobile-nav-link">Cidade</button>
-                <button onclick="scrollToSection('educacao')" class="mobile-nav-link">Educação</button>
-                <button onclick="scrollToSection('recursos')" class="mobile-nav-link">Recursos</button>
-            </div>
-        </nav>
-    </header>
+<div class="nav-actions">
+  <button id="themeBtn">🌙</button>
+  <button id="menuBtn">☰</button>
+</div>
+```
 
-    <!-- Seção Hero -->
-    <section id="inicio" class="hero">
-        <div class="hero-bg">
-            <img src="https://images.unsplash.com/photo-1767103843277-453cdfee20cc?w=1080" alt="Campo">
-        </div>
-        <div class="hero-content">
-            <h1 class="hero-title">Programa Agrinho</h1>
-            <p class="hero-subtitle">Educação que transforma o campo e a cidade</p>
-            <p class="hero-description">
-                Uma iniciativa educacional que conecta estudantes ao mundo rural e urbano,
-                promovendo sustentabilidade, cidadania e desenvolvimento social.
-            </p>
+  </div>
+</header>
 
-            <div class="hero-buttons">
-                <button onclick="scrollToSection('sobre')" class="btn btn-primary">Conheça o Programa</button>
-                <button onclick="scrollToSection('recursos')" class="btn btn-secondary">Recursos Educacionais</button>
-            </div>
+<main>
 
-            <div class="visitor-counter">
-                <p>🎓 Visitantes: <span id="visitorCount">0</span></p>
-            </div>
+<section id="inicio" class="hero">
+  <div class="hero-overlay"></div>
 
-            <button onclick="scrollToSection('sobre')" class="scroll-down">↓</button>
-        </div>
-    </section>
+  <div class="hero-content reveal">
+    <h2>Conectando Campo & Cidade</h2>
+    <p>Educação, sustentabilidade e futuro 🌱</p>
 
-    <!-- Seção Sobre -->
-    <section id="sobre" class="about-section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Sobre o Programa Agrinho</h2>
-                <div class="font-controls">
-                    <button onclick="changeFontSize(-2)" class="font-btn">A-</button>
-                    <button onclick="changeFontSize(2)" class="font-btn">A+</button>
-                </div>
-                <p class="section-description" id="aboutText">
-                    O Programa Agrinho é uma iniciativa educacional que busca conectar estudantes
-                    ao universo rural e urbano, promovendo conhecimento sobre agricultura, meio ambiente,
-                    cidadania e qualidade de vida.
-                </p>
-            </div>
+```
+<div class="hero-buttons">
+  <a href="#sobre" class="btn primary">Explorar</a>
+  <a href="#recursos" class="btn outline">Recursos</a>
+</div>
+```
 
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🌱</div>
-                    <h3 class="feature-title">Sustentabilidade</h3>
-                    <p class="feature-description">Práticas sustentáveis e consciência ambiental.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👥</div>
-                    <h3 class="feature-title">Cidadania</h3>
-                    <p class="feature-description">Formamos cidadãos conscientes.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📚</div>
-                    <h3 class="feature-title">Educação</h3>
-                    <p class="feature-description">Conteúdo educacional de qualidade.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🎯</div>
-                    <h3 class="feature-title">Desenvolvimento</h3>
-                    <p class="feature-description">Desenvolvimento social e econômico.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+  </div>
+</section>
 
-    <!-- Links Úteis -->
-    <section id="recursos" class="recursos-section">
-        <div class="container">
-            <h2 class="section-title">Recursos Educacionais</h2>
-            <div class="links-grid">
-                <a href="http://portaldoprofessor.mec.gov.br/" target="_blank" class="link-card">
-                    <h4>Portal do Professor</h4>
-                    <p>Material didático e planos de aula</p>
-                </a>
-                <a href="https://tvescola.org.br/" target="_blank" class="link-card">
-                    <h4>TV Escola</h4>
-                    <p>Vídeos educativos</p>
-                </a>
-                <a href="https://www.embrapa.br/" target="_blank" class="link-card">
-                    <h4>Embrapa</h4>
-                    <p>Pesquisas para o campo</p>
-                </a>
-            </div>
-        </div>
-    </section>
+<section id="sobre" class="section">
+  <div class="container reveal">
+    <h2>Sobre o Programa</h2>
+    <p>
+      O Agrinho promove educação sustentável e cidadania,
+      conectando o campo e a cidade através do conhecimento.
+    </p>
 
-    <footer class="footer">
-        <p>© <span id="currentYear"></span> Programa Agrinho 💚</p>
-    </footer>
+```
+<div class="grid">
+  <div class="card">🌱 Sustentabilidade</div>
+  <div class="card">👥 Cidadania</div>
+  <div class="card">📚 Educação</div>
+</div>
+```
 
-    <script src="script.js"></script>
+  </div>
+</section>
+
+<section id="recursos" class="section alt">
+  <div class="container reveal">
+    <h2>Recursos</h2>
+
+```
+<div class="grid">
+  <a href="https://www.embrapa.br/" target="_blank">Embrapa</a>
+  <a href="https://tvescola.org.br/" target="_blank">TV Escola</a>
+  <a href="http://portaldoprofessor.mec.gov.br/" target="_blank">Professor</a>
+</div>
+```
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>© <span id="year"></span> Agrinho</p>
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
