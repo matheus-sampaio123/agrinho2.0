@@ -1,41 +1,44 @@
-// DARK MODE
-const btn = document.getElementById("themeBtn");
 
-btn.onclick = () => {
+// ===== VARIÁVEIS =====
+let contador = 0;
+
+// ===== INTRO =====
+document.getElementById("btnIntro").onclick = () => {
+  alert("Tema: Agro forte, futuro sustentável 🌱");
+};
+
+// ===== PRODUÇÃO =====
+document.getElementById("btnProducao").onclick = () => {
+  document.getElementById("textoProducao").textContent =
+    "A produção agrícola utiliza tecnologia para aumentar a eficiência e reduzir impactos ambientais.";
+};
+
+// ===== MEIO AMBIENTE =====
+document.getElementById("btnAmbiente").onclick = () => {
+  document.getElementById("textoAmbiente").textContent =
+    "O desmatamento e uso consciente da água são desafios importantes para o futuro.";
+};
+
+// ===== OPINIÃO USUÁRIO =====
+document.getElementById("btnOpniao").onclick = () => {
+  let texto = document.getElementById("opniao").value;
+  document.getElementById("saida").textContent = "Sua opinião: " + texto;
+};
+
+// ===== CONTADOR =====
+const contadorEl = document.getElementById("contador");
+
+document.getElementById("mais").onclick = () => {
+  contador++;
+  contadorEl.textContent = contador;
+};
+
+document.getElementById("menos").onclick = () => {
+  contador--;
+  contadorEl.textContent = contador;
+};
+
+// ===== MODO ESCURO =====
+document.getElementById("themeBtn").onclick = () => {
   document.body.classList.toggle("dark");
-  localStorage.setItem("theme", document.body.classList.contains("dark"));
 };
-
-if (localStorage.getItem("theme") === "true") {
-  document.body.classList.add("dark");
-}
-
-// MENU MOBILE
-const menuBtn = document.getElementById("menuBtn");
-const nav = document.getElementById("nav");
-
-menuBtn.onclick = () => {
-  nav.classList.toggle("active");
-};
-
-// SCROLL REVEAL
-function reveal() {
-  document.querySelectorAll(".reveal").forEach(el => {
-    const top = el.getBoundingClientRect().top;
-    if (top < window.innerHeight - 100) {
-      el.classList.add("active");
-    }
-  });
-}
-
-window.addEventListener("scroll", reveal);
-window.addEventListener("load", reveal);
-
-// CONTADOR
-let count = localStorage.getItem("visits") || 0;
-count++;
-localStorage.setItem("visits", count);
-document.getElementById("counter").textContent = count;
-
-// ANO
-document.getElementById("year").textContent = new Date().getFullYear();
