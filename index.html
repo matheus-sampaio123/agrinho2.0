@@ -1,85 +1,62 @@
 <!DOCTYPE html>
-
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Agrinho</title>
-
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
 <header class="header">
   <div class="container nav-container">
     <h1 class="logo">🌱 Agrinho</h1>
 
-```
-<nav id="nav" class="nav">
-  <a href="#inicio">Início</a>
-  <a href="#sobre">Sobre</a>
-  <a href="#recursos">Recursos</a>
-</nav>
+    <nav id="nav" class="nav">
+      <a href="#inicio">Início</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#recursos">Recursos</a>
+    </nav>
 
-<div class="nav-actions">
-  <button id="themeBtn">🌙</button>
-  <button id="menuBtn">☰</button>
-</div>
-```
-
+    <div class="nav-actions">
+      <button id="themeBtn">🌙</button>
+      <button id="menuBtn">☰</button>
+    </div>
   </div>
 </header>
 
 <main>
 
-<section id="inicio" class="hero">
-  <div class="hero-overlay"></div>
-
-  <div class="hero-content reveal">
+<section id="inicio" class="hero reveal">
+  <div class="hero-content">
     <h2>Conectando Campo & Cidade</h2>
     <p>Educação, sustentabilidade e futuro 🌱</p>
 
-```
-<div class="hero-buttons">
-  <a href="#sobre" class="btn primary">Explorar</a>
-  <a href="#recursos" class="btn outline">Recursos</a>
-</div>
-```
+    <a href="#sobre" class="btn">Explorar</a>
 
+    <p class="contador">Visitantes: <span id="counter">0</span></p>
   </div>
 </section>
 
-<section id="sobre" class="section">
-  <div class="container reveal">
-    <h2>Sobre o Programa</h2>
+<section id="sobre" class="section reveal">
+  <div class="container">
+    <h2>Sobre</h2>
     <p>
-      O Agrinho promove educação sustentável e cidadania,
-      conectando o campo e a cidade através do conhecimento.
+      O Programa Agrinho promove educação, sustentabilidade e cidadania.
     </p>
-
-```
-<div class="grid">
-  <div class="card">🌱 Sustentabilidade</div>
-  <div class="card">👥 Cidadania</div>
-  <div class="card">📚 Educação</div>
-</div>
-```
-
   </div>
 </section>
 
-<section id="recursos" class="section alt">
-  <div class="container reveal">
+<section id="recursos" class="section alt reveal">
+  <div class="container">
     <h2>Recursos</h2>
 
-```
-<div class="grid">
-  <a href="https://www.embrapa.br/" target="_blank">Embrapa</a>
-  <a href="https://tvescola.org.br/" target="_blank">TV Escola</a>
-  <a href="http://portaldoprofessor.mec.gov.br/" target="_blank">Professor</a>
-</div>
-```
-
+    <div class="grid">
+      <a href="https://www.embrapa.br/" target="_blank" rel="noopener noreferrer">Embrapa</a>
+      <a href="https://tvescola.org.br/" target="_blank" rel="noopener noreferrer">TV Escola</a>
+      <a href="http://portaldoprofessor.mec.gov.br/" target="_blank" rel="noopener noreferrer">Portal do Professor</a>
+    </div>
   </div>
 </section>
 
@@ -90,6 +67,5 @@
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
