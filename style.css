@@ -1,153 +1,32 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  transition: 0.3s;
-  padding-top: 70px;
-}
-
-.dark {
-  background: #0f172a;
-  color: white;
-}
-
-/* HEADER */
-.header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: white;
-  border-bottom: 1px solid #ddd;
-  z-index: 1000;
-}
-
-.dark .header {
-  background: #1f2937;
-}
-
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-}
-
-.nav {
-  display: flex;
-  gap: 15px;
-}
-
-.nav a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* MOBILE MENU */
-.nav-actions button {
-  margin-left: 10px;
-}
-
-@media (max-width: 768px) {
-  .nav {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background: white;
-    flex-direction: column;
-    width: 180px;
-    padding: 1rem;
-    display: none;
-  }
-
-  .nav.active {
-    display: flex;
-  }
-
-  .dark .nav {
-    background: #1f2937;
-  }
-}
-
-/* HERO */
 .hero {
-  height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background: linear-gradient(135deg, #10b981, #3b82f6);
+  background: linear-gradient(135deg, #22c55e, #16a34a);
   color: white;
+  text-align: center;
+  padding: 80px 20px;
 }
 
-/* SECTIONS */
 .section {
-  padding: 4rem 1rem;
+  padding: 60px 20px;
+  background: #f9fafb;
 }
 
-.alt {
-  background: #f3f4f6;
+.section:nth-child(even) {
+  background: #ffffff;
 }
 
-.dark .alt {
-  background: #111827;
+h2 {
+  color: #15803d;
 }
 
-/* GRID */
-.grid {
-  display: grid;
-  gap: 1rem;
-}
-
-@media (min-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.grid a {
-  padding: 1rem;
-  background: white;
-  border-radius: 8px;
-  text-decoration: none;
-  color: black;
-}
-
-.dark .grid a {
-  background: #1f2937;
+button {
+  background: #16a34a;
   color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  cursor: pointer;
 }
 
-/* BOTÃO */
-.btn {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 10px 20px;
-  background: #111;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-}
-
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: 2rem;
-  background: #111;
-  color: white;
-}
-
-/* ANIMAÇÃO */
-.reveal {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: 0.6s;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
+button:hover {
+  background: #15803d;
 }
